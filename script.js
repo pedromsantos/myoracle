@@ -9960,7 +9960,7 @@ function GetRandomWords () {
         window.msCrypto.getRandomValues(randomWords);
     }
 
-    var i;
+    var i = 0;
     var text = '';
     for (i = 0; i < randomWords.length; i++) {
         text += words[Math.abs(randomWords[i]) % wordCount] + ' ';
