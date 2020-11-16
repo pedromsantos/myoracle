@@ -9943,7 +9943,7 @@ function displayQuote(){
 }
 
 
-function GetRandomWords () {å
+function GetRandomWords () {
     var randomWords;
     var wordCount;
 
