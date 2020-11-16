@@ -9930,19 +9930,12 @@ let quotes=[
 // btn.addEventListener('click', displayQuote);
 
 function displayQuote(){
-   
+
     //display the quote of that index
     let div=document.querySelector('#quote');
     let quote=`<div class="card">
     <img src="icons/favicon.png">
-    <p>${
-           var randomWords = GetRandomWords();
-           var i;
-           for (i = 0; i < randomWords.length; i++) {
-                text += randomWords[i] + "<br>";
-           }
-           text
-        }</p>
+    <p>${ GetRandomWords() }</p>
     <img src="icons/favicon.png">
    </div>
     `;
@@ -9950,7 +9943,7 @@ function displayQuote(){
 }
 
 
-function GetRandomWords () {
+function GetRandomWords () {å
     var randomWords;
     var wordCount;
 
@@ -9967,6 +9960,11 @@ function GetRandomWords () {
         window.msCrypto.getRandomValues(randomWords);
     }
 
-    return randomWords;
-};
+    var i;
+    var text;
+    for (i = 0; i < randomWords.length; i++) {
+        text += randomWords[i] + ' ';
+    }
 
+    return text;
+};
