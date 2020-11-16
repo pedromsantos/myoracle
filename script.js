@@ -9961,7 +9961,7 @@ function GetRandomWords () {
     }
 
     var i;
-    var text;
+    var text = '';
     for (i = 0; i < randomWords.length; i++) {
         text += words[Math.abs(randomWords[i]) % wordCount -1] + ' ';
     }
