@@ -19,7 +19,7 @@ h2 {
 .btn{
     height:50px;
     width:150px;
-    font-size: 22px;
+    font-size: 32px;
     color:#ffffff;
     background-color: #ee9be4;
     box-shadow: 4px 4px #4a4be7;
@@ -40,7 +40,7 @@ button:focus {outline: none;}
 
 p{
   font-family:Segoe UI;
-  font-size: 24px;}
+  font-size: 32px;}
 
 img{height:25px;width:25px;}
 
