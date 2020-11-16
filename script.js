@@ -9932,14 +9932,14 @@ let quotes=[
 function displayQuote(){
 
     //display the quote of that index
-    let div=document.querySelector('#quote');
-    let quote=`<div class="card">
+    let div=document.querySelector('#answer');
+    let answer=`<div class="card">
     <img src="icons/favicon.png">
     <p>${ GetRandomWords() }</p>
     <img src="icons/favicon.png">
    </div>
     `;
-    div.innerHTML=quote;
+    div.innerHTML=answer;
 }
 
 
