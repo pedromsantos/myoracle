@@ -9942,6 +9942,12 @@ function displayQuote(){
     div.innerHTML=answer;
 }
 
+function sleep(ms) {
+  var start = new Date().getTime(), expire = start + ms;
+  while (new Date().getTime() < expire) { }
+  return;
+}
+
 function getRandomIntInclusive(min, max) {
     const randomBuffer = new Uint32Array(1);
 
@@ -9959,6 +9965,7 @@ function GetRandomWords () {
     var randomWords = new Array(wordCount);
         
     for (i = 0; i < randomWords.length; i++) {
+      sleep(30)
       randomWords[i] = getRandomIntInclusive(0, words.length - 1);
     }
 
