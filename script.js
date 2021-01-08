@@ -9942,28 +9942,38 @@ function displayQuote(){
     div.innerHTML=answer;
 }
 
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+function getRandomIntInclusive(min, max) {
+    const randomBuffer = new Uint32Array(1);
+
+    window.crypto.getRandomValues(randomBuffer);
+
+    let randomNumber = randomBuffer[0] / (0xffffffff + 1);
+
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(randomNumber * (max - min + 1)) + min;
+}
 
 function GetRandomWords () {
     var randomWords;
     var wordCount;
 
-    // First we're going to try to use a built-in CSPRNG
-    if (window.crypto && window.crypto.getRandomValues) {
-        wordCount = Math.floor(Math.random()* 40);
-        randomWords = new Int32Array(wordCount);
-        window.crypto.getRandomValues(randomWords);
-    }
-    // Because of course IE calls it msCrypto instead of being standard
-    else if (window.msCrypto && window.msCrypto.getRandomValues) {
-        wordCount = Math.floor(Math.random()* 40);
-        randomWords = new Int32Array(wordCount);
-        window.msCrypto.getRandomValues(randomWords);
+    wordCount = getRandomIntInclusive(1, 40);
+        
+    for (i = 0; i < randomWords.length; i++) {
+      sleep(25).then(() => {
+          randomWords[i] = getRandomIntInclusive(0, words.length - 1);
+      });
     }
 
     var i = 0;
     var text = '';
     for (i = 0; i < randomWords.length; i++) {
-        text += words[Math.abs(randomWords[i]) % wordCount] + ' ';
+        text += words[randomWords[i]] + ' ';
     }
 
     return text;
