@@ -9961,11 +9961,12 @@ function getRandomIntInclusive(min, max) {
 };
 
 function GetRandomWords () {
+    sleep(30);
     var wordCount = getRandomIntInclusive(1, 20);
     var randomWords = new Array(wordCount);
         
     for (i = 0; i < randomWords.length; i++) {
-      sleep(30)
+      sleep(30);
       randomWords[i] = getRandomIntInclusive(0, words.length - 1);
     }
 
