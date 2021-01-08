@@ -9963,7 +9963,7 @@ async function GetRandomWords () {
     var randomWords = new Array(wordCount);
         
     for (i = 0; i < randomWords.length; i++) {
-      await sleep(100);
+      //await sleep(100);
       randomWords[i] = getRandomIntInclusive(0, words.length - 1);
     }
 
