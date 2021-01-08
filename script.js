@@ -9938,7 +9938,6 @@ function displayQuote(){
     <p>${ GetRandomWords(); }</p>
     <img src="icons/favicon.png">
    </div>
-    `;
     div.innerHTML=answer;
 }
 
