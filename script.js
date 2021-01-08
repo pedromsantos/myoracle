@@ -9935,7 +9935,7 @@ function displayQuote(){
     let div=document.querySelector('#answer');
     let answer=`<div class="card">
     <img src="icons/favicon.png">
-    <p>${ (async function() { await GetRandomWords(); })(); }</p>
+    <p>${ GetRandomWords(); }</p>
     <img src="icons/favicon.png">
    </div>
     `;
@@ -9954,7 +9954,7 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(randomNumber * (max - min + 1)) + min;
 };
 
-async function GetRandomWords () {
+function GetRandomWords () {
     var wordCount = getRandomIntInclusive(1, 20);
     var randomWords = new Array(wordCount);
         
