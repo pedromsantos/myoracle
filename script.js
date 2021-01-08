@@ -9935,7 +9935,7 @@ function displayQuote(){
     let div=document.querySelector('#answer');
     let answer=`<div class="card">
     <img src="icons/favicon.png">
-    <p>${ await GetRandomWords() }</p>
+    <p>${ GetRandomWords().then() }</p>
     <img src="icons/favicon.png">
    </div>
     `;
