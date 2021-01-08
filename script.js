@@ -9959,10 +9959,8 @@ function getRandomIntInclusive(min, max) {
 }
 
 function GetRandomWords () {
-    var randomWords;
-    var wordCount;
-
-    wordCount = getRandomIntInclusive(1, 40);
+    var wordCount = getRandomIntInclusive(1, 40);
+    var randomWords = new Array(wordCount);
         
     for (i = 0; i < randomWords.length; i++) {
       sleep(25).then(() => {
