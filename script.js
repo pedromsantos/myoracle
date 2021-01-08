@@ -9963,9 +9963,7 @@ function GetRandomWords () {
     var randomWords = new Array(wordCount);
         
     for (i = 0; i < randomWords.length; i++) {
-      sleep(25).then(() => {
-          randomWords[i] = getRandomIntInclusive(0, words.length - 1);
-      });
+      randomWords[i] = getRandomIntInclusive(0, words.length - 1);
     }
 
     var i = 0;
