@@ -9935,9 +9935,10 @@ function displayQuote(){
     let div=document.querySelector('#answer');
     let answer=`<div class="card">
     <img src="icons/favicon.png">
-    <p>${ GetRandomWords(); }</p>
+    <p>${ GetRandomWords() }</p>
     <img src="icons/favicon.png">
    </div>
+    `;
     div.innerHTML=answer;
 }
 
