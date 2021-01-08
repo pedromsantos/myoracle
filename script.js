@@ -9942,10 +9942,6 @@ function displayQuote(){
     div.innerHTML=answer;
 }
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 function getRandomIntInclusive(min, max) {
     const randomBuffer = new Uint32Array(1);
 
@@ -9963,7 +9959,6 @@ async function GetRandomWords () {
     var randomWords = new Array(wordCount);
         
     for (i = 0; i < randomWords.length; i++) {
-      //await sleep(100);
       randomWords[i] = getRandomIntInclusive(0, words.length - 1);
     }
 
