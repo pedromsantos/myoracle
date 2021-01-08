@@ -9952,14 +9952,14 @@ function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(randomNumber * (max - min + 1)) + min;
-}
+};
 
 function GetRandomWords () {
-    var wordCount = getRandomIntInclusive(1, 40);
+    var wordCount = getRandomIntInclusive(1, 20);
     var randomWords = new Array(wordCount);
         
     for (i = 0; i < randomWords.length; i++) {
-      randomWords[i] = getRandomIntInclusive(0, words.length - 1);
+      randomWords[i] = setTimeout(getRandomIntInclusive(0, words.length - 1), 25);
     }
 
     var i = 0;
